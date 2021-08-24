@@ -18,13 +18,13 @@ req = urllib.request.urlopen("https://ralph-unit-test-report.s3-ap-southeast-1.a
 output = req.read()
 print(output)
 #exit(1)
-#json = json.loads(output)
+json = json.loads(output)
 
-#overRollStatus = json['projectStatus']['status']
+overRollStatus = json['projectStatus']['status']
 
 #induStatus = json['projectStatus']['conditions']
 
-#print("Project Status - " + str(overRollStatus))
+print("Project Status - " + str(overRollStatus))
 
 #if overRollStatus == "ERROR":
 #    exit(1)
