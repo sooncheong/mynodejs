@@ -17,8 +17,7 @@ jobs:
       # debugging sonarcloud check failure on python
       - name: check python version
         run: which python
-             type -a python
-             ls -l /usr/bin/python
+
       - name: Status check
         uses: skx/github-action-tester@master
         with:
