@@ -16,7 +16,9 @@ req = urllib.request.urlopen("https://ralph-unit-test-report.s3-ap-southeast-1.a
 #opener = urllib2.build_opener()
 #f = opener.open(req)
 output = req.read()
-json = json.loads(output)
+print(output)
+exit(1)
+#json = json.loads(output)
 
 overRollStatus = json['projectStatus']['status']
 
