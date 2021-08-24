@@ -27,8 +27,12 @@ jobs:
       # status check
       - name: Status check
         uses: skx/github-action-tester@master
-        with:
-          script: .github/workflows/CI-backend-integration.py
+          
+      # run the python script
+      - name: execute python script 
+            run: |
+              python .github/workflows/CI-backend-integration.py
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
