@@ -20,11 +20,16 @@ jobs:
 
       - uses: actions/setup-python@v2
 
+      # run the python script
+      - name: execute python script 
+        run: |
+          python .github/workflows/CI-backend-integration.py
+
       # status check
-      - name: Status check
-        uses: jannekem/run-python-script-action@v1
-        with:
-          script: .github/workflows/CI-backend-integration.py
+      #- name: Status check
+      #  uses: skx/github-action-tester@master
+      #  with:
+      #    script: .github/workflows/CI-backend-integration.py
 
       #- name: SonarCloud Scan
       #  uses: SonarSource/sonarcloud-github-action@master
