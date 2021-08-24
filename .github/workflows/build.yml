@@ -20,7 +20,7 @@ jobs:
 
       # status check
       - name: Status check
-        uses: SparkPost/github-action-tester-python
+        uses: SparkPost/github-action-tester@master
         with:
           script: .github/workflows/CI-backend-integration.py
 
