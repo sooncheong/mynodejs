@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/bin/sh
 
 import urllib2
 import json
