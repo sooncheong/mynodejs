@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import urllib2
+import urllib.request
 import json
 
 import time
@@ -11,11 +11,12 @@ CI_RALPH_BACKEND_BUILD_TIME = os.getenv("CI_RALPH_BACKEND_BUILD_TIME") or 600
 print("ENV - " + str(CI_RALPH_BACKEND_BUILD_TIME))
 time.sleep(float(CI_RALPH_BACKEND_BUILD_TIME))
 
-req = urllib2.Request("https://ralph-unit-test-report.s3-ap-southeast-1.amazonaws.com/admin-portal/backend/integration/result.json")
+req = urllib.request.urlopen("https://ralph-unit-test-report.s3-ap-southeast-1.amazonaws.com/admin-portal/backend/integration/result.json")
 
-opener = urllib2.build_opener()
-f = opener.open(req)
-json = json.loads(f.read())
+#opener = urllib2.build_opener()
+#f = opener.open(req)
+output = req.read()
+json = json.loads(output)
 
 overRollStatus = json['projectStatus']['status']
 
