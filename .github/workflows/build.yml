@@ -30,8 +30,8 @@ jobs:
           
       # run the python script
       - name: execute python script 
-            run: |
-              python .github/workflows/CI-backend-integration.py
+        run: |
+          python .github/workflows/CI-backend-integration.py
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
