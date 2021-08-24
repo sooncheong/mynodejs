@@ -26,7 +26,7 @@ overRollStatus = json['projectStatus']['status']
 
 print("Project Status - " + str(overRollStatus))
 
-#if overRollStatus == "ERROR":
-#    exit(1)
-#else:
-#    exit(0)  
+if overRollStatus == "ERROR":
+   exit(1)
+else:
+   exit(0)  
