@@ -18,23 +18,14 @@ jobs:
       - name: check python version
         run: type -a python
 
-      # setup python 
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8 #install the python needed
-      
       # status check
       - name: Status check
         uses: skx/github-action-tester@master
-          
-      # run the python script
-      - name: execute python script 
-        run: |
-          python .github/workflows/CI-backend-integration.py
+        with:
+          script: .github/workflows/CI-backend-integration.py
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #- name: SonarCloud Scan
+      #  uses: SonarSource/sonarcloud-github-action@master
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+      #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
