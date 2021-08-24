@@ -18,6 +18,13 @@ jobs:
       - name: check python version
         run: type -a python
 
+      # setup python 
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      
+      # status check
       - name: Status check
         uses: skx/github-action-tester@master
         with:
