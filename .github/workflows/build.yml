@@ -22,7 +22,7 @@ jobs:
 
       # status check
       - name: Status check
-        uses: skx/github-action-tester@master
+        uses: jannekem/run-python-script-action@v1
         with:
           script: .github/workflows/CI-backend-integration.py
 
