@@ -21,7 +21,7 @@ jobs:
       # newly added to run the python script
       - name: Status check
         run: |
-          python .github/workflows/CI-backend-integration.py
+          python .github/workflows/CI-backend-dev.py
 
       # status check
       #- name: Status check
