@@ -11,7 +11,7 @@ import  os
 #print("ENV - " + str(CI_RALPH_BACKEND_BUILD_TIME))
 #time.sleep(float(CI_RALPH_BACKEND_BUILD_TIME))
 
-req = urllib.request.urlopen("https://ralph-unit-test-report.s3-ap-southeast-1.amazonaws.com/admin-portal/backend/integration/result.json")
+req = urllib.request.urlopen("https://msd-demo-dev.sphdigital.com/wp-content/result.json")
 
 #opener = urllib2.build_opener()
 #f = opener.open(req)
