@@ -1,4 +1,4 @@
-name: Build
+name: Build Dev Env
 on:
   pull_request:
     branches: [ backend-uat ]
